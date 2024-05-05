@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./image/fotopaginaportfolio.png" type="image/x-icon">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- Menú principal -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">GR</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick= "seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick= "seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick= "seleccionar()">SKILLS</a></li>
+                    <li><a href="#portfolio" onclick= "seleccionar()">PROYECTOS</a></li>
+                    <li><a href="#contacto" onclick= "seleccionar()">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="./image/FotoPerfil.png" alt="Yo">
+            </div>
+            <h1>GONZALO RANITI</h1>
+            <h2>Programador Front End React</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Sobre Mí</h2>
+            <p><span>Hola, soy Gonzalo Raniti.</span> Soy una persona proactiva, organizada y responsable, con buenas relaciones interpersonales. Amo la programación, siempre tengo la mejor predisposición para todo lo que debo hacer.</p>
+
+            <div class="fila">
+                <!-- Mis datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            03-04-1996
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            11 2612-8155
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            Gonzalog.raniti@gmail.com
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- Mis intereses -->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-computer"></i>
+                            <span>PROGRAMAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MÚSICA</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJAR</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-person-hiking"></i>
+                            <span>DEPORTES</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="descargarCV" onclick="descargarCV()">
+                Descargar CV <i class="fa-solid fa-download"></i>
+                <span class="overlay"></span>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills">
+        <div class="skill container">
+            <div class="knowledge-part" id="skills">
+                <h2 class="skillstyp">HERRAMIENTAS</h2>
+                <div class="knowledge">
+                    <div>
+                        <img src="./image/html-icon.png" alt="">
+                        <h3>HTML</h3>
+                    </div>
+                    <div>
+                        <img src="./image/css-icon.png" alt="">
+                        <h3>CSS</h3>
+                    </div>
+                    <div><img src="./image/js-icon.png" alt="">
+                        <h3>Javascript</h3>
+                    </div>
+                    <div class="sass"><img src="./image/sass.png" alt="">
+                        <h3>Sass</h3>
+                    </div>
+                    <div><img src="./image/reactjs.png" alt="">
+                        <h3>React Js</h3>
+                    </div>
+                    <div><img src="./image/bootstrap.png" alt="">
+                        <h3>bootstrap</h3>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="tools-part">
+                <h2 class="skillstyp">CONOCIMIENTOS</h2>
+                <div class="tools">
+                    <div>
+                        <img src="./image/github-icon.png" alt="">
+                        <h3>GitHub</h3>
+                    </div>
+                    <div>
+                        <img src="./image/vc-icon.png" alt="">
+                        <h3>Visual Studio</h3>
+                    </div>
+                    <div>
+                        <img src="./image/git-icon.png" alt="">
+                        <h3>GIT</h3>
+                    </div>
+                    <div>
+                        <img src="./image/Figma.png" alt="">
+                        <h3>FIGMA</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYECTOS -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PROYECTOS</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="./image/Proyecto-1.PNG" alt="">
+                    <div class="overlay">
+                        <h3>Sonrie La Pelota</h3>
+                        <p>HTML - CSS</p>
+                        <a href="https://sonrielapelota.netlify.app/" class="boton" target="_blank">Ver Ahora</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./image/GoFilm.PNG" alt="">
+                    <div class="overlay">
+                        <h3>GO FILM</h3>
+                        <p>HTML - CSS - JS</p>
+                        <a href='https://gofilm.netlify.app/' class="boton" target="_blank">Ver Ahora</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./image/CgIndumentaria.PNG" alt="">
+                    <div class="overlay">
+                        <h3>CG INDUMENTARIA</h3>
+                        <p>E-COMMERCE - REACT JS</p>
+                        <a href='https://cgindumentaria3.netlify.app/' class="boton" target="_blank">Ver Ahora</a>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <img src="./image/calculadora.PNG" alt="">
+                    <div class="overlay">
+                        <h3>CALCULADORA</h3>
+                        <p>Calculadora básica diseñada HTML - CSS - JS</p>
+                        <a href='https://digitdynamo.netlify.app' class="boton" target="_blank">Ver Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <div class="col">
+                    <form action="tu_script_de_procesamiento.php" method="POST">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                        <input type="tel" name="telefono" placeholder="Telefono" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="mensaje" cols="30" rows="10" placeholder="Escribí tu mensaje" required></textarea>
+                        <button type="submit">Enviar<i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-sharp fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
