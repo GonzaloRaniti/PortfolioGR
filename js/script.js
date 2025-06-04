@@ -19,7 +19,7 @@ function seleccionar() {
 // DESCARGAR CV
 
 function descargarCV() {
-    const url = './image/CurriculumGonzaloRaniti.pdf'
+    const url = './image/cvGonzaRaniti.pdf';
     window.open(url, '_blank');
 }
 
