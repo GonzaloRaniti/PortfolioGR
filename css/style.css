@@ -11,6 +11,101 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Animaciones de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clases de animación */
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.animate-slide-in-top {
+    animation: slideInFromTop 0.8s ease-out;
+}
+
+/* Efectos hover mejorados */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(28, 182, 152, 0.3);
+}
+
+.hover-glow {
+    transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(28, 182, 152, 0.5);
+}
+
 /*  NAVBAR */
 .contenedor-header {
     background: #1e2326;
@@ -19,6 +114,12 @@ html {
     top: 0;
     left: 0;
     z-index: 99;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contenedor-header:hover {
+    box-shadow: 0 4px 20px rgba(28, 182, 152, 0.2);
 }
 
 .contenedor-header header {
@@ -35,6 +136,13 @@ html {
     font-size: 36px;
     color: #1CB698;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.contenedor-header header .logo a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px rgba(28, 182, 152, 0.8);
+    transform: scale(1.1);
 }
 
 .contenedor-header header ul {
@@ -55,6 +163,8 @@ html {
     }
 }
 
+
+
 .nav-responsive {
     background-color: #1CB698;
     color: #fff;
@@ -62,6 +172,13 @@ html {
     border-radius: 5px;
     cursor: pointer;
     display: none;
+    transition: all 0.3s ease;
+}
+
+.nav-responsive:hover {
+    background-color: #fff;
+    color: #1CB698;
+    transform: scale(1.1);
 }
 
 /* INICIO */
@@ -82,7 +199,14 @@ html {
     margin: auto;
     text-align: center;
     border-radius: 40px;
+    animation: scaleIn 1s ease-out;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
 
+.inicio .contenido-banner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(28, 182, 152, 0.2);
 }
 
 .inicio .contenido-banner img {
@@ -92,17 +216,26 @@ html {
     width: 80%;
     margin: auto;
     border-radius: 100%;
+    transition: all 0.3s ease;
+}
+
+.inicio .contenido-banner:hover img {
+    border-color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(28, 182, 152, 0.6);
 }
 
 .inicio .contenido-banner h1 {
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
+    animation: fadeInUp 1s ease-out 0.3s both;
 }
 
 .inicio .contenido-banner h2 {
     font-size: 15px;
     font-weight: normal;
+    animation: fadeInUp 1s ease-out 0.6s both;
 }
 
 .inicio .contenido-banner .redes a {
@@ -117,9 +250,12 @@ html {
     margin: 40px 5px;
     font-size: 20px;
     transition: .3s;
+    animation: fadeInUp 1s ease-out 0.9s both;
 
     &:hover {
         background-color: #1CB698;
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 5px 15px rgba(28, 182, 152, 0.4);
     }
 }
 
@@ -129,6 +265,13 @@ html {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.sobremi .contenido-seccion {
+    animation: fadeInUp 1s ease-out;
 }
 
 .sobremi .contenido-seccion {
@@ -205,9 +348,12 @@ html {
     align-items: center;
     justify-content: center;
     transition: .3s;
+    cursor: pointer;
 
     &:hover {
         background-color: #1CB698;
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(28, 182, 152, 0.3);
     }
 }
 
@@ -228,6 +374,13 @@ html {
     color: #fff;
     position: relative;
     z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.sobremi button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(28, 182, 152, 0.3);
 }
 
 .sobremi button .overlay {
@@ -249,8 +402,10 @@ html {
 /* SKILLS */
 section.skills {
     background-color: #1e2326;
-    ;
     color: white;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
 }
 
 .skill {
@@ -319,6 +474,25 @@ section.skills {
     transform: translate(0px, -150px);
 }
 
+.knowledge div,
+.tools div {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.knowledge div:hover,
+.tools div:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.knowledge div:hover img,
+.tools div:hover img {
+    transform: scale(1.1);
+    filter: drop-shadow(0 5px 15px rgba(28, 182, 152, 0.5));
+}
+
 
 .skillstyp {
     font-family: 'Righteous';
@@ -330,6 +504,9 @@ section.skills {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
 }
 .portfolio .contenido-seccion{
     max-width: 1100px;
@@ -363,14 +540,62 @@ section.skills {
     width: 100%;
     height: 100%;
     text-align: center;
-    background: linear-gradient(rgba(28,182,152,.8), rgba(28,182,152,.8));
+    background: linear-gradient(rgba(28,182,152,.9), rgba(28,182,152,.9));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transition: 1s;
+    transition: all 0.5s ease;
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.portfolio .galeria .proyecto .overlay .tech-stack {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portfolio .galeria .proyecto .overlay .description {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.portfolio .galeria .proyecto .overlay .project-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portfolio .galeria .proyecto .overlay .project-links .boton {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 2px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.portfolio .galeria .proyecto .overlay .project-links .boton:hover {
+    background-color: #fff;
+    color: #1CB698;
+    transform: translateY(-2px);
+}
+
+.portfolio .galeria .proyecto .overlay .project-links .github-link {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.portfolio .galeria .proyecto .overlay .project-links .github-link:hover {
+    background-color: #333;
+    color: #fff;
 }
 .portfolio .galeria .proyecto .overlay h3{
     margin-bottom: 20px;
@@ -404,6 +629,9 @@ section.skills {
     background-color: #1e2326;
     color: #fff;
     padding: 50px 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
 }
 
 .contacto .contenido-seccion {
@@ -420,8 +648,9 @@ section.skills {
 
 .contacto .fila {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 .contacto .col {
@@ -430,15 +659,88 @@ section.skills {
     position: relative;
 }
 
+.contacto .info-contacto {
+    animation: fadeInLeft 1s ease-out;
+}
+
+.contacto .info-contacto h3 {
+    font-size: 32px;
+    font-family: 'Righteous';
+    margin-bottom: 20px;
+    color: #1CB698;
+}
+
+.contacto .info-contacto p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: rgba(28, 182, 152, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.contacto-item:hover {
+    background-color: rgba(28, 182, 152, 0.2);
+    transform: translateX(10px);
+}
+
+.contacto-item i {
+    font-size: 24px;
+    color: #1CB698;
+    width: 40px;
+    text-align: center;
+}
+
+.contacto-item h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #1CB698;
+}
+
+.contacto-item p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+}
+
 .contacto .col input, .contacto .col textarea {
     display: block;
     width: 100%;
     padding: 18px;
-    border: none;
+    border: 2px solid transparent;
     margin-bottom: 20px;
     background-color: #181b1d;
     color: #fff;
     font-size: 18px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    animation: fadeInRight 1s ease-out;
+}
+
+.contacto .col input:focus, .contacto .col textarea:focus {
+    outline: none;
+    border-color: #1CB698;
+    background-color: #252A2E;
+    box-shadow: 0 0 10px rgba(28, 182, 152, 0.3);
+}
+
+.contacto .col input:hover, .contacto .col textarea:hover {
+    background-color: #252A2E;
+    border-color: rgba(28, 182, 152, 0.5);
 }
 
 .contacto button {
@@ -453,6 +755,13 @@ section.skills {
     color: #fff;
     position: relative;
     z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.contacto button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(28, 182, 152, 0.3);
 }
 
 .contacto button .overlay  {
@@ -494,7 +803,14 @@ footer .redes a{
     line-height: 42px;
     margin: 40px 5px;
     font-size: 20px;
-    transition: .3s;
+    transition: all 0.3s ease;
+}
+
+footer .redes a:hover {
+    background-color: #1CB698;
+    border-color: #1CB698;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(28, 182, 152, 0.4);
 }
 
 footer .arriba {
@@ -510,6 +826,15 @@ footer .arriba {
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+footer .arriba:hover {
+    background-color: #fff;
+    color: #1CB698;
+    transform: translateX(-50%) translateY(-5px);
+    box-shadow: 0 10px 20px rgba(28, 182, 152, 0.4);
 }
 
 /* MEDIAS QUERIES */
