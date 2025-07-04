@@ -544,43 +544,48 @@ section.skills {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     transition: all 0.5s ease;
     font-size: 18px;
     letter-spacing: 3px;
     opacity: 0;
-    padding: 20px;
-    overflow-y: auto;
+    padding: 15px;
 }
 
 .portfolio .galeria .proyecto .overlay .tech-stack {
     color: #fff;
     font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 8px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .portfolio .galeria .proyecto .overlay .description {
     color: #fff;
-    font-size: 14px;
-    line-height: 1.4;
-    margin-bottom: 20px;
-    opacity: 0.9;
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    opacity: 0.95;
+    max-width: 280px;
 }
 
 .portfolio .galeria .proyecto .overlay .project-links {
     display: flex;
-    gap: 10px;
+    gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .portfolio .galeria .proyecto .overlay .project-links .boton {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 6px 12px;
+    font-size: 12px;
     border: 2px solid #fff;
     transition: all 0.3s ease;
+    border-radius: 4px;
 }
 
 .portfolio .galeria .proyecto .overlay .project-links .boton:hover {
@@ -598,8 +603,10 @@ section.skills {
     color: #fff;
 }
 .portfolio .galeria .proyecto .overlay h3{
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     transition: 1s;
+    font-size: 20px;
+    font-weight: bold;
 }
 .portfolio .galeria .proyecto .overlay:hover{
     opacity: 1;
@@ -646,17 +653,10 @@ section.skills {
     padding: 20px 0;
 }
 
-.contacto .fila {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-}
-
-.contacto .col {
-    width: 50%;
-    padding: 10px;
-    position: relative;
+.contacto-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .contacto .info-contacto {
@@ -717,66 +717,52 @@ section.skills {
     margin: 0;
 }
 
-.contacto .col input, .contacto .col textarea {
-    display: block;
-    width: 100%;
-    padding: 18px;
-    border: 2px solid transparent;
-    margin-bottom: 20px;
-    background-color: #181b1d;
-    color: #fff;
+.redes-contacto {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.redes-contacto h4 {
     font-size: 18px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    animation: fadeInRight 1s ease-out;
+    margin-bottom: 15px;
+    color: #1CB698;
 }
 
-.contacto .col input:focus, .contacto .col textarea:focus {
-    outline: none;
-    border-color: #1CB698;
-    background-color: #252A2E;
-    box-shadow: 0 0 10px rgba(28, 182, 152, 0.3);
+.redes-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.contacto .col input:hover, .contacto .col textarea:hover {
-    background-color: #252A2E;
-    border-color: rgba(28, 182, 152, 0.5);
-}
-
-.contacto button {
-    cursor: pointer;
-    background-color: transparent;
-    border: 2px solid #fff;
-    width: fit-content;
-    display: block;
-    margin: 20px auto;
-    padding: 10px 22px;
-    font-size: 16px;
+.redes-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     color: #fff;
-    position: relative;
-    z-index: 10;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 2px solid #1CB698;
+    border-radius: 25px;
     transition: all 0.3s ease;
-    border-radius: 5px;
+    background-color: transparent;
 }
 
-.contacto button:hover {
+.redes-links a:hover {
+    background-color: #1CB698;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(28, 182, 152, 0.3);
+    box-shadow: 0 5px 15px rgba(28, 182, 152, 0.3);
 }
 
-.contacto button .overlay  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background-color: hsl(59, 92%, 42%);
-    z-index: -1;
-    transition: 1s;
+.redes-links a i {
+    font-size: 18px;
 }
-.contacto button:hover .overlay {
-    width: 100%;
+
+.redes-links a span {
+    font-size: 14px;
+    font-weight: 500;
 }
+
+
 
 /* FOOTER */
 footer {

@@ -19,7 +19,7 @@ function seleccionar() {
 // DESCARGAR CV
 
 function descargarCV() {
-    const url = './image/cvGonzaRaniti.pdf';
+    const url = './image/CV_GonzaloRaniti.pdf';
     window.open(url, '_blank');
 }
 
@@ -113,29 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Ejecutar una vez al cargar
     animarElementos();
-    
-    const formulario = document.querySelector("#contacto form");
-    formulario.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const datosFormulario = new FormData(formulario);
-        const datos = Object.fromEntries(datosFormulario.entries());
-        console.log("Datos del formulario:", datos);
-        
-        // Efecto de envío exitoso
-        const boton = formulario.querySelector('button');
-        const textoOriginal = boton.innerHTML;
-        boton.innerHTML = '<i class="fa-solid fa-check"></i> Enviado!';
-        boton.style.backgroundColor = '#1CB698';
-        boton.style.borderColor = '#1CB698';
-        
-        setTimeout(() => {
-            formulario.reset();
-            boton.innerHTML = textoOriginal;
-            boton.style.backgroundColor = 'transparent';
-            boton.style.borderColor = '#fff';
-            console.log("El contenido del formulario se ha borrado.");
-        }, 2000);
-    });
 });
 
 
