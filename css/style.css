@@ -639,6 +639,10 @@ section.skills {
     opacity: 0;
     transform: translateY(30px);
     transition: all 1s ease;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contacto .contenido-seccion {
@@ -657,6 +661,11 @@ section.skills {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contacto .info-contacto {
@@ -892,4 +901,61 @@ footer .arriba:hover {
     .contacto .fila .col {
         width: 100%;
     }
+}
+
+.inicio,
+.sobremi,
+.skills,
+.portfolio,
+.contacto {
+    padding-top: 90px;
+}
+
+@media (max-width: 900px) {
+  .portfolio .galeria {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio .galeria .proyecto {
+    max-width: 95vw;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio .galeria .proyecto .overlay {
+    padding: 10px 5px;
+    font-size: 15px;
+  }
+  .portfolio .galeria .proyecto .overlay h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+  }
+  .portfolio .galeria .proyecto .overlay .tech-stack {
+    font-size: 10px;
+    padding: 3px 6px;
+    margin-bottom: 6px;
+  }
+  .portfolio .galeria .proyecto .overlay .description {
+    font-size: 11px;
+    max-width: 90vw;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+  .portfolio .galeria .proyecto .overlay .project-links {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  .portfolio .galeria .proyecto .overlay .project-links .boton {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 0;
+    min-width: 120px;
+  }
 }
